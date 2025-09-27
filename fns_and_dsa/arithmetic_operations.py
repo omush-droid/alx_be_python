@@ -1,12 +1,10 @@
 """
 arithmetic_operations.py
 
-Exposes perform_operation(num1, num2, operation)
-
-Returns:
-  - float result for valid operations
-  - string error messages for invalid operation or division by zero
+Defines a function perform_operation(num1, num2, operation)
+that performs basic arithmetic operations.
 """
+
 from typing import Union
 
 def perform_operation(num1: float, num2: float, operation: str) -> Union[float, str]:
@@ -21,9 +19,8 @@ def perform_operation(num1: float, num2: float, operation: str) -> Union[float, 
     Returns:
         float | str: Result of the operation, or an error message string
                      (e.g., 'Error: Division by zero' or
-                     'Error: Invalid operation. ...').
+                     'Error: Invalid operation').
     """
-    # Defensive handling if operation isn't a string
     try:
         op = operation.strip().lower()
     except Exception:
@@ -41,3 +38,4 @@ def perform_operation(num1: float, num2: float, operation: str) -> Union[float, 
         return num1 / num2
     else:
         return "Error: Invalid operation. Choose add, subtract, multiply, or divide."
+
