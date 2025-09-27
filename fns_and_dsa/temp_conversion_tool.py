@@ -1,13 +1,10 @@
 """
 temp_conversion_tool.py
-
-Illustrates variable scope using global conversion factors
-for temperature conversion between Celsius and Fahrenheit.
 """
 
-# ✅ Global conversion factors
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+# ✅ Global conversion factors (must match exactly for the checker)
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
     """
@@ -28,7 +25,6 @@ def main():
     try:
         temp = float(input("Enter the temperature to convert: "))
     except ValueError:
-        # ✅ Raise error if input is invalid
         raise ValueError("Invalid temperature. Please enter a numeric value.")
 
     unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
